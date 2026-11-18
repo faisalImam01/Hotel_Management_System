@@ -1,0 +1,19 @@
+import { Component } from '@angular/core';
+import { RoomresultComponent } from '../roomresult/roomresult.component';
+import { RoomsearchComponent } from '../roomsearch/roomsearch.component';
+
+@Component({
+  selector: 'app-home',
+  imports: [RoomresultComponent,RoomsearchComponent],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
+})
+export class HomeComponent {
+  searchResults: any[] = [] // store the result of the searched room
+
+  // handle the result comming from the roomseearch component
+  handleSearchResult(results: any[]){
+    this.searchResults = results
+
+}
+}
